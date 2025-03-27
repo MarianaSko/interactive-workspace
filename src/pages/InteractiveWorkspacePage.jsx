@@ -5,6 +5,7 @@ import { DndContext } from "@dnd-kit/core";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Container from "../components/Container";
+import Link from "../components/Link";
 
 const defaultBlocks = [
   { id: "1", x: 0, y: 0, zIndex: 1, width: 300, height: 100 },
@@ -96,29 +97,34 @@ const InteractiveWorkspacePage = () => {
   const handleReset = () => setBlocks(defaultBlocks);
 
   return (
-    <Container>
-      <Heading>Interactive Workspace</Heading>
-      <Button onClick={handleReset}>Reset</Button>
-      <div
-        ref={containerRef}
-        className="relative w-full h-[80%] overflow-hidden"
-      >
-        <DndContext
-          onDragStart={handleDragStart}
-          onDragEnd={handleDragEnd}
-          modifiers={[restrictToParentElement]}
+    <div>
+      <Container>
+        <Heading>Interactive Workspace</Heading>
+        <Button onClick={handleReset}>Reset</Button>
+        <div
+          ref={containerRef}
+          className="relative w-full h-[80%] overflow-hidden"
         >
-          {blocks.map((block) => (
-            <Block
-              key={block.id}
-              {...block}
-              onDelete={handleDelete}
-              onResize={handleResize}
-            />
-          ))}
-        </DndContext>
+          <DndContext
+            onDragStart={handleDragStart}
+            onDragEnd={handleDragEnd}
+            modifiers={[restrictToParentElement]}
+          >
+            {blocks.map((block) => (
+              <Block
+                key={block.id}
+                {...block}
+                onDelete={handleDelete}
+                onResize={handleResize}
+              />
+            ))}
+          </DndContext>
+        </div>
+      </Container>
+      <div className="absolute top-8 left-8">
+        <Link path={"/"}>Home</Link>
       </div>
-    </Container>
+    </div>
   );
 };
 

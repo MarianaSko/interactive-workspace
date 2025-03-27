@@ -52,14 +52,14 @@ const Block = ({ id, x, y, zIndex, width, height, onDelete, onResize }) => {
       ref={setNodeRef}
       {...listeners}
       {...attributes}
-      className="bg-emerald-100 border-2 rounded-lg border-emerald-600 shadow-lg flex items-center justify-center text-emerald-600 text-xl cursor-pointer absolute"
+      className="bg-emerald-900 border-2 rounded-lg border-emerald-200 shadow-lg flex items-center justify-center text-emerald-200 text-xl cursor-pointer absolute"
       style={{ ...blockStyle(x, y, zIndex, width, height), ...style }}
     >
       Block {id}
       <button
         onPointerDown={(e) => e.stopPropagation()}
         onClick={handledeleteClick}
-        className="absolute top-1 right-1 rounded-full w-4 h-4 bg-emerald-200 hover:bg-emerald-300  text-emerald-600 text-[8px] text-center border border-emerald-600"
+        className="absolute top-1 right-1 rounded-full w-4 h-4 transition  hover:bg-emerald-700  text-emerald-200 text-[8px] text-center border border-emerald-200 hover:border-emerald-500 "
       >
         X
       </button>

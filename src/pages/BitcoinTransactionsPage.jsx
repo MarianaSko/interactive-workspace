@@ -4,6 +4,7 @@ import TotalCard from "../components/interactiveWorkspace/bitcoinTransactions/To
 import TransactionTable from "../components/interactiveWorkspace/bitcoinTransactions/TransactionTable";
 import Heading from "../components/Heading";
 import Container from "../components/Container";
+import Link from "../components/Link";
 
 const BitcoinTransactionsPage = () => {
   const [transactions, setTransactions] = useState([]);
@@ -53,19 +54,24 @@ const BitcoinTransactionsPage = () => {
   }, []);
 
   return (
-    <Container className={"max-w-2xl"}>
-      <Heading>Bitcoin Transaction Tracker</Heading>
-      <ControlButtons
-        startTracking={startTracking}
-        stopTracking={stopTracking}
-        resetTracking={resetTracking}
-        isRunning={isRunning}
-      />
-      <TotalCard total={total} />
-      {transactions.length !== 0 && (
-        <TransactionTable transactions={transactions} />
-      )}
-    </Container>
+    <div>
+      <Container className={"max-w-5xl"}>
+        <Heading>Bitcoin Transaction Tracker</Heading>
+        <ControlButtons
+          startTracking={startTracking}
+          stopTracking={stopTracking}
+          resetTracking={resetTracking}
+          isRunning={isRunning}
+        />
+        <TotalCard total={total} />
+        {transactions.length !== 0 && (
+          <TransactionTable transactions={transactions} />
+        )}
+      </Container>
+      <div className="absolute top-8 left-8">
+        <Link path={"/"}>Home</Link>
+      </div>
+    </div>
   );
 };
 

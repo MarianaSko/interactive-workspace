@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Link = ({ path, children }) => {
   return (
     <NavLink
-      className="p-2 bg-emerald-100 hover:bg-emerald-200 transition-all duration-300 ease-in-out border rounded-md border-emerald-600"
+      className="transition-transform transform hover:scale-105 text-xl font-medium text-emerald-200 hover:text-emerald-800 px-6 py-3 rounded-lg border border-emerald-200 hover:bg-emerald-200"
       to={path}
     >
       {children}
