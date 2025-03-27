@@ -1,8 +1,13 @@
+import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import "./App.css";
 import HomePage from "./pages/HomePage";
-import InteractiveWorkspacePage from "./pages/InteractiveWorkspacePage";
-import BitcoinTransactionsPage from "./pages/BitcoinTransactionsPage";
+
+const InteractiveWorkspacePage = lazy(() =>
+  import("./pages/InteractiveWorkspacePage")
+);
+const BitcoinTransactionsPage = lazy(() =>
+  import("./pages/BitcoinTransactionsPage")
+);
 
 function App() {
   return (
