@@ -1,5 +1,3 @@
-import React from "react";
-
 const TotalCard = ({ total }) => {
   return (
     <div

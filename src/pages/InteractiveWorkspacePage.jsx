@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Block from "../components/interactiveWorkspace/Block";
-import { restrictToParentElement } from "@dnd-kit/modifiers";
 import { DndContext } from "@dnd-kit/core";
+import { restrictToParentElement } from "@dnd-kit/modifiers";
+import Block from "../components/interactiveWorkspace/Block";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Container from "../components/Container";

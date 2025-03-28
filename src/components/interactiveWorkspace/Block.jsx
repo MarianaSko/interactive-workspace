@@ -1,5 +1,5 @@
 import { useDraggable } from "@dnd-kit/core";
-import ResizingIcon from "../ResizingIcon";
+import ResizingIcon from "../../assets/ResizingIcon";
 
 const blockStyle = (x, y, zIndex, width, height) => ({
   width: `${width}px`,

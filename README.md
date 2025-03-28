@@ -1,12 +1,13 @@
-# React + Vite
+## Libraries Used
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **@dnd-kit/core**, **@dnd-kit/modifiers**:  
+  These libraries are used for drag-and-drop interactions. The `@dnd-kit/core` package is essential because it handles the core logic of drag-and-drop interactions. Without it, you would need to implement your own drag-and-drop logic, which would require significant development effort and complexity.
 
-Currently, two official plugins are available:
+- **tailwindcss**, **@tailwindcss/vite**:  
+  Tailwind CSS is a utility-first CSS framework used for styling the UI. The `@tailwindcss/vite` package allows for seamless integration with Vite, helping accelerate UI development by providing pre-built utility classes for common styles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **react**, **react-dom**:  
+  These libraries are used for UI development and rendering in the project.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **react-router-dom**:  
+  This library is used for handling client-side routing in the application, allowing for seamless navigation between pages.

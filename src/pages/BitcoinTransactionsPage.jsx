@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import ControlButtons from "../components/interactiveWorkspace/bitcoinTransactions/ControlButtons";
-import TotalCard from "../components/interactiveWorkspace/bitcoinTransactions/TotalCard";
-import TransactionTable from "../components/interactiveWorkspace/bitcoinTransactions/TransactionTable";
+import { useEffect, useRef, useState } from "react";
+import ControlButtons from "../components/bitcoinTransactions/ControlButtons";
+import TotalCard from "../components/bitcoinTransactions/TotalCard";
+import TransactionTable from "../components/bitcoinTransactions/TransactionTable";
 import Heading from "../components/Heading";
 import Container from "../components/Container";
 import Link from "../components/Link";
